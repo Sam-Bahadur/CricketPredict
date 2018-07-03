@@ -1,12 +1,8 @@
-import pandas as pd
-import numpy as np
-
 from collections import defaultdict
-from sklearn import model_selection
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.linear_model import LinearRegression, LogisticRegression
-from sklearn.ensemble import ExtraTreesClassifier, RandomForestRegressor, AdaBoostRegressor
-from sklearn.model_selection import KFold
+
+import pandas as pd
+
+from Logistic import LogisticRegression
 
 
 def Venue_Changes(teamA, teamB, venue):  # venue is changed to 1 for teamA, -1 for teamB and 0 for no team.
@@ -134,22 +130,20 @@ def pastPerformance(df1, teamA, teamB, bat_avg):
     if cntB == 0:
         cntB = 1
         formB = bat_avg
-
     return form_A / cntA - form_B / cntB
 
 
 def testPredicit(df1, testData, TeamA, TeamB):
     # df1 = df1[((df1['TeamA']==TeamA)&(df1['TeamB']==TeamB) | (df1['TeamA']==TeamB)&(df1['TeamB']==TeamA))]
     predictors = ['Toss', 'Toss_Decision', 'Venue', 'HTH', 'WinningPerDes', 'Strength', 'latest_form']
-    alg = LogisticRegression(random_state=1)
+    alg = LogisticRegression(lr=0.1, num_iter=3000)
+
     df = df1[['Toss', 'Toss_Decision', 'Venue', 'HTH', 'WinningPerDes', 'Strength', 'latest_form', 'Winner']]
     train_predictors = (df[predictors])
     train_target = df["Winner"]
     alg.fit(train_predictors, train_target)
     test_predictions = alg.predict(testData)
     return test_predictions[0]
-
-
 # main Function
 
 def startPrediction(teamA_input, teamB_input, venue_input, toss_input, tossDecision_input):

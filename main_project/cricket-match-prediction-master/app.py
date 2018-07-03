@@ -105,9 +105,8 @@ def Toss(df1):
 
 def Classfier(df1):
     predictors = ['Toss', 'Toss_Decision', 'HTH', 'Venue', 'WinningPerDes', 'Strength',
-                  'latest_form']  # , 'Toss_Decision', 'HTH', 'Venue', 'WinningPerDes' ... LogisticRegression(random_state=1)  ......AdaBoostRegressor(DecisionTreeRegressor(max_depth=10), n_estimators=500, random_state=1)
-    alg = DecisionTreeRegressor(
-        max_depth=10)  # RandomForestRegressor(random_state = 0, n_estimators = 500)#ExtraTreesClassifier(random_state=1, n_estimators=500, min_samples_split=2, min_samples_leaf=1)##LogisticRegression(random_state=1)
+                  'latest_form']
+    alg = LogisticRegression(lr=0.1, num_iter=3000)
     df = df1[['Toss', 'Toss_Decision', 'HTH', 'Venue', 'WinningPerDes', 'Strength', 'latest_form', 'Winner']]
     kf = KFold(df1.shape[0], random_state=1)
     predictions = []
@@ -126,8 +125,7 @@ def Classfier(df1):
             cnt = cnt + 1
 
     accuracy = cnt / len(predictions)
-    print
-    accuracy
+    print(accuracy)
 
 
 def bat_debut():
