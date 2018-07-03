@@ -3,26 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b50ceb06-39b8-4f7f-b0a3-b1a75d77ac97" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../CricketPrediction/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CricketPrediction/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/Australia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/AustraliavsSouth africa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/EnglandvsIndia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/Englandvspakistan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/India.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/IndiavsAustralia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/IndiavsPakistan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/Indiavseng.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/Pakistan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/South Africa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/South AfricavsPakistan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/South Africavsindia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/Sri Lanka.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/Sri LankavsSouth Africa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/eng.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/england.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/foo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/indiavsengland.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CricketPrediction/~$pstoneProjectFile.docx" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,8 +40,8 @@
       <file leaf-file-name="CapstoneProject.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/CapstoneProject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="164">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -82,6 +62,37 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../CricketPrediction" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../CricketPrediction" value="master" />
+      </map>
+    </option>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/../CricketPrediction" source="prakash" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/../CricketPrediction" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -277,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530603116524</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="hhkk">
+      <created>1530603485332</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1530603485332</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -302,13 +320,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1830161" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1830161" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32913387" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32913387" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32913387" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -352,6 +371,32 @@
       <window_info anchor="bottom" id="Python Console" order="7" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -360,7 +405,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="hh" />
-    <option name="LAST_COMMIT_MESSAGE" value="hh" />
+    <MESSAGE value="hhkk" />
+    <option name="LAST_COMMIT_MESSAGE" value="hhkk" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -746,8 +792,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../CricketPrediction/main_project/cricket-match-prediction-master/CapstoneProject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="164">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
