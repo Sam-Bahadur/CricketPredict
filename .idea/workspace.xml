@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b50ceb06-39b8-4f7f-b0a3-b1a75d77ac97" name="Default" comment="hhkk">
+    <list default="true" id="b50ceb06-39b8-4f7f-b0a3-b1a75d77ac97" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/CapstoneProject.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/CapstoneProject.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/modelGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/modelGenerator.py" afterDir="false" />
     </list>
@@ -15,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="modelGenerator.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modelGenerator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/modelGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3750">
-              <caret line="131" column="23" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
+            <state relative-caret-position="134">
+              <caret line="145" column="44" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -39,8 +40,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="108" column="51" lean-forward="true" selection-start-line="108" selection-end-line="109" />
+            <state relative-caret-position="110">
+              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -48,11 +49,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CapstoneProject.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CapstoneProject.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/CapstoneProject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="225">
+              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,6 +74,21 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>\</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>/</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -96,11 +115,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/CapstoneProject.py" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/history_script.py" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/math_plot.py" />
-        <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/app.py" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/modelGenerator.py" />
+        <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/app.py" />
+        <option value="$PROJECT_DIR$/main_project/Demo.py" />
+        <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/CapstoneProject.py" />
       </list>
     </option>
   </component>
@@ -116,6 +136,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,11 +155,17 @@
               <item name="main_project" type="462c0819:PsiDirectoryNode" />
               <item name="cricket-match-prediction-master" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CricketPredict" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CricketPrediction" type="462c0819:PsiDirectoryNode" />
+              <item name="main_project" type="462c0819:PsiDirectoryNode" />
+              <item name="cricket-match-prediction-master" type="462c0819:PsiDirectoryNode" />
+              <item name="stadium" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,7 +192,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.history_script">
+  <component name="RunManager" selected="Python.CapstoneProject">
     <configuration name="CapstoneProject" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Cricket Prediction 4" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,6 +206,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/CapstoneProject.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Cricket Prediction 4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main_project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_project/Demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -202,41 +247,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="history_script" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="py.test for modelGenerator.testPredicit" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Cricket Prediction 4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main_project/cricket-match-prediction-master" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/history_script.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="math_plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Cricket Prediction 4" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main_project/cricket-match-prediction-master" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/math_plot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;modelGenerator.testPredicit&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="py.test in modelGenerator.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Cricket Prediction 4" />
@@ -253,19 +276,19 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list>
-      <item itemvalue="Python.CapstoneProject" />
       <item itemvalue="Python.app" />
       <item itemvalue="Python tests.py.test in modelGenerator.py" />
-      <item itemvalue="Python.math_plot" />
-      <item itemvalue="Python.history_script" />
+      <item itemvalue="Python tests.py.test for modelGenerator.testPredicit" />
+      <item itemvalue="Python.CapstoneProject" />
+      <item itemvalue="Python.Demo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.history_script" />
-        <item itemvalue="Python.math_plot" />
-        <item itemvalue="Python tests.py.test in modelGenerator.py" />
-        <item itemvalue="Python.app" />
         <item itemvalue="Python.CapstoneProject" />
+        <item itemvalue="Python.Demo" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python tests.py.test in modelGenerator.py" />
+        <item itemvalue="Python tests.py.test for modelGenerator.testPredicit" />
       </list>
     </recent_temporary>
   </component>
@@ -294,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530603485332</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="final edit">
+      <created>1530631218058</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1530631218058</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -316,21 +346,27 @@
     <history-entry file="py_test_in_modelGenerator_py - 2018.06.20 at 12h 49m 43s.xml">
       <configuration name="py.test in modelGenerator.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="py_test_for_modelGenerator_testPredicit - 2018.07.04 at 10h 21m 20s.xml">
+      <configuration name="py.test for modelGenerator.testPredicit" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_modelGenerator_py - 2018.07.04 at 10h 22m 35s.xml">
+      <configuration name="py.test in modelGenerator.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1830161" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1830161" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32913387" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32913387" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.6333789" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.6330709" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -343,21 +379,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24283855" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3269494" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -405,7 +441,8 @@
     </ignored-roots>
     <MESSAGE value="hh" />
     <MESSAGE value="hhkk" />
-    <option name="LAST_COMMIT_MESSAGE" value="hhkk" />
+    <MESSAGE value="final edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="final edit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -426,13 +463,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/math_plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -777,13 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/CapstoneProject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/Logistic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -791,22 +814,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/modelGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="145" column="44" selection-start-line="145" selection-start-column="44" selection-end-line="145" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="108" column="51" lean-forward="true" selection-start-line="108" selection-end-line="109" />
+        <state relative-caret-position="110">
+          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/modelGenerator.py">
+    <entry file="file://$PROJECT_DIR$/main_project/Demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3750">
-          <caret line="131" column="23" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
+        <state relative-caret-position="-600">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/CapstoneProject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>

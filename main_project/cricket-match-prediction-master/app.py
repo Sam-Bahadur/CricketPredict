@@ -4,6 +4,8 @@ import numpy as np
 import glob
 
 from collections import defaultdict
+
+from distributed import joblib
 from sklearn import model_selection
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.linear_model import LinearRegression, LogisticRegression
@@ -46,7 +48,7 @@ def HTH(df):
 
         playOffAandB = df[
             ((df['TeamA'] == teamA) & (df['TeamB'] == teamB) | (df['TeamA'] == teamB) & (df['TeamB'] == teamA)) & (
-                        df.Date < date)]
+                    df.Date < date)]
         playOffAandB = playOffAandB.sort_values(by='Date', ascending=[0])
         playOffAandB = playOffAandB.head(10)
 
@@ -114,6 +116,15 @@ def Classfier(df1):
         train_predictors = (df[predictors].iloc[train, :])
         train_target = df["Winner"].iloc[train]
         alg.fit(train_predictors, train_target)
+        # save the model to disk
+        filename = 'finalized_model.sav'
+        joblib.dump(alg, filename)
+
+        # some time later...
+        # load the model from disk
+        loaded_model = joblib.load(filename)
+        result = loaded_model.score(train_predictors, test_predictions)
+        print(result)
         test_predictions = alg.predict(df[predictors].iloc[test, :])
         predictions.append(test_predictions)
 
@@ -127,9 +138,8 @@ def Classfier(df1):
     accuracy = cnt / len(predictions)
     print(accuracy)
 
-
 def bat_debut():
-    path = "C:/Users/jatin singhal/Downloads/cricket-match-prediction-master/cricket-match-prediction-master/Dataset/PlayerInfo"  # use your path
+    path = "C:/Users/cityzen10/Downloads/CricketPrediction/main_project/cricket-match-prediction-master/Dataset/PlayerInfo"  # use your path
     allFiles = glob.glob(path + "/*.csv")
     frame = pd.DataFrame()
     list_ = []
@@ -179,7 +189,6 @@ def Scoringfn(df1, bat_avg, bowl_avg):
         df['Matches_Played'] = df['Matches_Played'].replace('-', 0)
         df.loc[(df['Bowl_Inngs'] == 1) & (df['Matches_Played'] == 1), 'Bowl_Avg'] = bowl_avg
 
-
         df['Bat_Avg'] = df['Bat_Avg'].replace('-', bat_avg)
         df['Bowl_Avg'] = df['Bowl_Avg'].replace('-', MAX)
         df['Wkts_Taken'] = df['Wkts_Taken'].replace('-', 0)
@@ -195,7 +204,7 @@ def Scoringfn(df1, bat_avg, bowl_avg):
         for index, row in teamA_list.iterrows():
             total_A = total_A + float(row['Bat_Avg'])
         power_A = total_A / 11
-        #print(power_A)
+        # print(power_A)
 
         for index, row in teamB_list.iterrows():
             total_B = total_B + float(row['Bat_Avg'])
