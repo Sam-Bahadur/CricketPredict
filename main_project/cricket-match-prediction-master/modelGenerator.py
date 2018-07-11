@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 import pandas as pd
-from distributed import joblib
+#from distributed import joblib
 
 from Logistic import LogisticRegression
 
@@ -197,5 +197,9 @@ def startPrediction(teamA_input, teamB_input, venue_input, toss_input, tossDecis
     # print(testData)
 
     if testPredicit(df, testData, TeamA, TeamB) == 1:
-        return teamA_input
-    return teamB_input
+        #a=teamA_input
+        #xyz={a,str(HTH),str(WinningPerDes),str(latest_form)}
+        return teamA_input,str(HTH),str(WinningPerDes),str(latest_form)
+    #a=teamB_input
+    #xyz = {a, str(HTH), str(WinningPerDes), str(latest_form)}
+    return teamB_input,str(HTH),str(WinningPerDes),str(latest_form)
