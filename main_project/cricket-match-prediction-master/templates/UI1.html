@@ -9,13 +9,13 @@
 </head>
 <body>
 <h1>CRICKET ANALYSIS AND PREDICTION</h1>
-<form>
-<a href="{{ url_for('UI1') }}"><input id="bu" class="btn btn-success btn-lg" type="button" name="" value="Result Prediction"></a>
+<form action="UI1" method="post">
+<a href="{{ url_for('UI1') }}"><input id="bu" class="btn btn-success btn-lg" type="submit" name="Result Prediction" value="Result Prediction"></a>
  <input id="but" class="btn btn-success btn-lg" type="button" name="" value="Player_XI Selection"></a>
 
-
-	<input class="btn btn-success btn-lg" type="search"name="" value="" placeholder="Search">
-    <a href="{{ url_for('player_XI') }}"><input class="btn btn-success btn-lg" type="submit" name=""value="search"></a>
+    <input type="text" name="select" placeholder="batsman or bowler">
+	<input class="btn btn-success btn-lg" type="text"name="searchplayer" value="" placeholder="Full Name ">
+    <a href="{{ url_for('UI1') }}"><input id="k" class="btn btn-success btn-lg" type="submit" name="search"value="search"></a>
 </form>
 </body>
 </html>

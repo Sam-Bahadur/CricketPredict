@@ -3,6 +3,7 @@ from wtforms import Form, TextAreaField, validators
 import cgi
 import cgitb
 import modelGenerator
+import graph
 
 app = Flask(__name__)
 
@@ -13,22 +14,21 @@ def index():
 @app.route('/UI1', methods=['GET', 'POST'])
 def UI1():
     if request.method == 'POST':
-        # do stuff when the form is submitted
+        if str(request.form.get('Result Prediction'))=='Result Prediction':
+            return render_template('UI2.html')
+        elif str(request.form.get('search'))=='search':
+            select=str(request.form.get('select'))
+            print(select)
+            player=str(request.form.get('searchplayer'))
+            print(player)
+            graph.graphofplayer(select,player)
+            return render_template('UI1.html')
 
-        # redirect to end the POST handling
-        # the redirect can be to the same route or somewhere else
-        #json_ = request.json
-        #query_df = pd.DataFrame(json_)
-        #query = pd.get_dummies(query_df)
-        #prediction = modelGenerator.startPrediction("India","Australia","mumbai","Australia","bat")
-        #eturn prediction
-        return redirect(url_for('UI1'))
+        else:
+            return redirect(url_for('UI1'))
 
-    # show the form, it wasn't submitted
-    return render_template('UI2.html')
-
-
-    #return render_template('UI2.html')
+    elif request.method=='GET':
+        return "sorry"
 
 
 
@@ -50,7 +50,7 @@ def player_XI():
 
         # redirect to end the POST handling
         # the redirect can be to the same route or somewhere else
-        return 'helllloo'
+        return 'her'
 
    # show the form, it wasn't submitted
     return "helll"
