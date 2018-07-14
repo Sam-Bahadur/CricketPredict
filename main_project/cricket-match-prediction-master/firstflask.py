@@ -4,6 +4,7 @@ import cgi
 import cgitb
 import modelGenerator
 import graph
+import database
 
 app = Flask(__name__)
 
@@ -18,11 +19,22 @@ def UI1():
             return render_template('UI2.html')
         elif str(request.form.get('search'))=='search':
             select=str(request.form.get('select'))
-            print(select)
+            #print(select)
             player=str(request.form.get('searchplayer'))
-            print(player)
+
+            #print(player)
             graph.graphofplayer(select,player)
-            return render_template('UI1.html')
+            a,b,c,d,e,f=database.readdata(player)
+            #a1= ", ".join( repr(e) for e in a )
+            a1=str(a)[2:-3]
+            b1=str(b)[2:-3]
+            c1=str(c)[2:-3]
+            d1=str(d)[2:-3]
+            e1=str(e)[2:-3]
+            f1=str(f)[2:-3]
+
+            return render_template('UI4.html',naam=player,m=a1,i=b1,r=c1,h=d1,avg=e1,sr=f1)
+
 
         else:
             return redirect(url_for('UI1'))
@@ -43,9 +55,11 @@ def UI2():
     return render_template('UI3.html',value=a,value1=b,value2=c,value3=d)
     #return render_template('welcome.php')
 
-@app.route('/player_XI', methods=['GET', 'POST'])
-def player_XI():
+@app.route('/UI4', methods=['GET', 'POST'])
+def UI4():
     if request.method == 'POST':
+        a=UI1()
+
         # do stuff when the form is submitted
 
         # redirect to end the POST handling

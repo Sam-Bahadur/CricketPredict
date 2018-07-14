@@ -5,7 +5,7 @@ import glob
 
 from collections import defaultdict
 
-from distributed import joblib
+#from distributed import joblib
 from sklearn import model_selection
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.linear_model import LinearRegression, LogisticRegression
@@ -116,15 +116,8 @@ def Classfier(df1):
         train_predictors = (df[predictors].iloc[train, :])
         train_target = df["Winner"].iloc[train]
         alg.fit(train_predictors, train_target)
-        # save the model to disk
-        filename = 'finalized_model.sav'
-        joblib.dump(alg, filename)
 
-        # some time later...
-        # load the model from disk
-        loaded_model = joblib.load(filename)
-        result = loaded_model.score(train_predictors, test_predictions)
-        print(result)
+
         test_predictions = alg.predict(df[predictors].iloc[test, :])
         predictions.append(test_predictions)
 
@@ -139,7 +132,7 @@ def Classfier(df1):
     print(accuracy)
 
 def bat_debut():
-    path = "C:/Users/cityzen10/Downloads/CricketPrediction/main_project/cricket-match-prediction-master/Dataset/PlayerInfo"  # use your path
+    path = "D:/Cricket/main_project/cricket-match-prediction-master/Dataset/PlayerInfo"  # use your path
     allFiles = glob.glob(path + "/*.csv")
     frame = pd.DataFrame()
     list_ = []

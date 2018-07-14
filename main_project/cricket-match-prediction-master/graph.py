@@ -2,9 +2,9 @@ import matplotlib.pyplot as mt
 import numpy as np
 def graphofplayer(ty,name):
     if ty=="batsman":
-        x,y=np.loadtxt('D:/major project/Code/New folder/runs and wickets/'+name+'.csv',delimiter=',',unpack=True)
+        x,y=np.loadtxt('D:/major project/Code/New folder/'+name+'.csv',delimiter=',',unpack=True)
         mt.subplot(211)
-        mt.bar(x,y,color=['red','green','blue'])
+        mt.bar(x,y,color=['orange'])
         mt.xlabel('YEAR')
         mt.ylabel('RUNS')
         mt.title(name)
