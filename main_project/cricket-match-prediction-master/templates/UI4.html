@@ -10,7 +10,9 @@
 </style>
 </head>
 <body>
-<table style="width:100%">
+<img src="{{url_for('static',filename=naam + '.png')}}" width="460" height="345">
+
+<table style="width:100%" >
   <tr>
     <th>Name</th>
     <th>Matches</th>
@@ -27,11 +29,13 @@
      <td>{{ r }}</td>
      <td>{{ h }}</td>
      <td>{{ avg }}</td>
-     <td>{{ sr }}</td>
+     <td>{{ sr  }}</td>
 
   </tr>
 
 </table>
+<a href="/my-link/">Click For graph</a>
+<img src="{{url_for('static',filename=naam + '1.png')}}" width="600" height="500">
 
 </body>
 </html>

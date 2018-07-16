@@ -27,7 +27,7 @@ def plot_graph_teamA(teamA,teamA_net_rates,dates_list):
 
 	plt.gcf().autofmt_xdate()
 	plt.legend([teamA], loc='upper left')
-	plt.savefig(teamA+'.png')
+	plt.savefig('static/images/'+teamA+'.png')
 	plt.show()
 
 

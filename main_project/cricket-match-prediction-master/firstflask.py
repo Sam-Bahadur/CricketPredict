@@ -18,13 +18,15 @@ def UI1():
         if str(request.form.get('Result Prediction'))=='Result Prediction':
             return render_template('UI2.html')
         elif str(request.form.get('search'))=='search':
+
             select=str(request.form.get('select'))
             #print(select)
             player=str(request.form.get('searchplayer'))
 
             #print(player)
+
             graph.graphofplayer(select,player)
-            a,b,c,d,e,f=database.readdata(player)
+            a,b,c,d,e,f,g=database.readdata(player)
             #a1= ", ".join( repr(e) for e in a )
             a1=str(a)[2:-3]
             b1=str(b)[2:-3]
@@ -33,7 +35,7 @@ def UI1():
             e1=str(e)[2:-3]
             f1=str(f)[2:-3]
 
-            return render_template('UI4.html',naam=player,m=a1,i=b1,r=c1,h=d1,avg=e1,sr=f1)
+            return render_template('UI4.html',naam=player,m=a1,i=b1,r=c1,h=d1,avg=e1,sr=f1,p=g)
 
 
         else:
@@ -41,6 +43,13 @@ def UI1():
 
     elif request.method=='GET':
         return "sorry"
+
+def madhu(sel,pla):
+    selected=sel
+    played=pla
+
+def madhudai():
+    graph.graphofplayer()
 
 
 

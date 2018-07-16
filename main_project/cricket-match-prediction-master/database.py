@@ -1,8 +1,9 @@
 import sqlite3
+import os
 conn = sqlite3.connect('Major.db')
 c = conn.cursor()
 
-
+'''
 def create_table():
     c.execute('CREATE TABLE IF NOT EXISTS playerinfo(name TEXT, match int, inn int,run int,hs int,avg REAL,sr REAL)')
 def data():
@@ -10,6 +11,7 @@ def data():
     conn.commit()
     c.close()
     conn.close()
+'''
 def readdata(naam):
     con = sqlite3.connect('Major.db')
     ca = con.cursor()
@@ -20,6 +22,7 @@ def readdata(naam):
     res=ca.fetchall()
     str1 = "select inn from playerinfo where name="
     querry = str1 + "'{}'".format(naam)
+    print(querry)
 
     ca.execute(querry)
     res1 = ca.fetchall()
@@ -44,8 +47,17 @@ def readdata(naam):
 
     ca.execute(querry)
     res5 = ca.fetchall()
+    str1 = "select photo from playerinfo where name="
+    querry = str1 + "'{}'".format(naam)
 
-    return res,res1,res2,res3,res4,res5
+    ca.execute(querry)
+    res6 = ca.fetchall()
+
+
+
+
+
+    return res,res1,res2,res3,res4,res5,res6
 
 
 
@@ -53,4 +65,4 @@ def readdata(naam):
 
 #create_table()
 #data()
-readdata('ab de villiers')
+readdata('angelo mathews')

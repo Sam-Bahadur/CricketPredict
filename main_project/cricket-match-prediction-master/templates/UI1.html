@@ -1,21 +1,92 @@
-<!doctype html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>CRICKET ANALYSIS AND PREDICTION</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-      <link rel="stylesheet"type="text/css"href="{{url_for('static',filename='UI1.css')}}">
-</head>
-<body>
-<h1>CRICKET ANALYSIS AND PREDICTION</h1>
-<form action="UI1" method="post">
-<a href="{{ url_for('UI1') }}"><input id="bu" class="btn btn-success btn-lg" type="submit" name="Result Prediction" value="Result Prediction"></a>
- <input id="but" class="btn btn-success btn-lg" type="button" name="" value="Player_XI Selection"></a>
+		<title>CAAP</title>
+			<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='fonts/iconic/css/material-design-iconic-font.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/animsition/css/animsition.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/daterangepicker/daterangepicker.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/main.css')}}">
+<!--===============================================================================================-->
 
-    <input type="text" name="select" placeholder="batsman or bowler">
-	<input class="btn btn-success btn-lg" type="text"name="searchplayer" value="" placeholder="Full Name ">
-    <a href="{{ url_for('UI1') }}"><input id="k" class="btn btn-success btn-lg" type="submit" name="search"value="search"></a>
+</head>
+
+<body>
+		<div class="background-wrap" class="body">
+		<video preload="auto" autoplay="true" loop="loop" muted="muted" class="video">
+			<source src="{{url_for('static',filename='video/stump.mp4')}}" type="video/mp4">
+				not supported
+		</video>	
+		</div>
+		<p>CRICKET ANALYSIS AND PREDICTION</p>
+
+<form action="UI1" method="post" >
+<table id="my_table" style="float: left;" bgcolor="#345490" style="margin-left: 500px">
+<tr>
+	<td>
+		<label class="label-input100">ROLE</label></td>
+		<td>
+					<select  id="fist team" name="select">
+						<option>batsman</option>
+						<option>bowler</option>
+						
+					</select>
+	</td>
+</tr>	
+
+<tr>
+	<td>
+					<span class="focus-input100"></span>
+				<label class="label-input100">PLAYER NAME</label></td>
+				<td>
+				<input type="text" name="searchplayer" ><br>
+				<!-- <div class="container-contact100-form-btn"> -->
+	</td>
+
+
+</tr>
+
+<tr>
+	<td>
+		<button  class="contact100-form-btn" type="submit" name="search"value="search">
+			<a href="{{ url_for('UI1') }}">
+						<span>
+							Submit
+							<i class="zmdi zmdi-arrow-right m-l-8"></i>
+						</span>
+			</a>
+					</button>
+	</td>
+
+</tr>
 </form>
+</table>
+<table bgcolor="#987643"  style="margin-left: 900px">
+	<tr>
+		<td>
+			<a href="index.html">
+			<img src="{{url_for('static',filename='images/bat.png')}}" >
+		</td>
+	</tr>
+</table>
+		
+
 </body>
 </html>
