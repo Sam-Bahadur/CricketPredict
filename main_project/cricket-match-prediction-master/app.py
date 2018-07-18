@@ -1,15 +1,12 @@
 from __future__ import division
-import pandas as pd
-import numpy as np
+
 import glob
-
+import time
 from collections import defaultdict
-
-#from distributed import joblib
-from sklearn import model_selection
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.linear_model import LinearRegression, LogisticRegression
-from sklearn.ensemble import ExtraTreesClassifier, RandomForestRegressor, AdaBoostRegressor
+import  _pickle as pk
+import numpy as np
+import pandas as pd
+from Logistic import  LogisticRegressionDemo
 from sklearn.model_selection import KFold
 
 
@@ -108,7 +105,7 @@ def Toss(df1):
 def Classfier(df1):
     predictors = ['Toss', 'Toss_Decision', 'HTH', 'Venue', 'WinningPerDes', 'Strength',
                   'latest_form']
-    alg = LogisticRegression(lr=0.1, num_iter=3000)
+    alg = LogisticRegressionDemo(lr=0.1, num_iter=3000)
     df = df1[['Toss', 'Toss_Decision', 'HTH', 'Venue', 'WinningPerDes', 'Strength', 'latest_form', 'Winner']]
     kf = KFold(df1.shape[0], random_state=1)
     predictions = []
@@ -116,10 +113,15 @@ def Classfier(df1):
         train_predictors = (df[predictors].iloc[train, :])
         train_target = df["Winner"].iloc[train]
         alg.fit(train_predictors, train_target)
+        with open('my_dumped_classifier.pkl', 'wb') as fid:
+            pk.dump(alg, fid)
 
+        # load it again
+        with open('my_dumped_classifier.pkl', 'rb') as fid:
+            alg = pk.load(fid)
 
-        test_predictions = alg.predict(df[predictors].iloc[test, :])
-        predictions.append(test_predictions)
+    test_predictions = alg.predict(df[predictors].iloc[test, :])
+    predictions.append(test_predictions)
 
     predictions = np.concatenate(predictions, axis=0)
     predictions = predictions.astype(int)
@@ -132,7 +134,7 @@ def Classfier(df1):
     print(accuracy)
 
 def bat_debut():
-    path = "D:/Cricket/main_project/cricket-match-prediction-master/Dataset/PlayerInfo"  # use your path
+    path = "C:/Users/cityzen10/Downloads/Compressed/MajorProject-prakash/main_project/ODI-Cricket-Prediction/Dataset/PlayerInfo"  # use your path
     allFiles = glob.glob(path + "/*.csv")
     frame = pd.DataFrame()
     list_ = []
@@ -288,21 +290,6 @@ def latest_form(df1, bat_avg):
 
     # def testPredicit(df1,testData):
 
-
-# 	predictors = ['Toss', 'Toss_Decision','Venue', 'HTH', 'WinningPerDes','Strength']
-# 	alg = LogisticRegression(random_state=1)
-# 	df = df1[['Toss', 'Toss_Decision', 'Venue', 'HTH', 'WinningPerDes', 'Strength','Winner']]
-# 	predictions = []
-# 	train_predictors = (df[predictors])
-# 	train_target = df["Winner"]
-# 	alg.fit(train_predictors, train_target)
-# 	test_predictions = alg.predict(testData)
-# 	if test_predictions[0] == 1:
-# 		print "Winner: india"
-# 	else:
-# 		print "Winner: Pakistan"
-
-
 ####Main
 
 df1 = pd.read_csv('Dataset/CompleteMatchDetails.csv')
@@ -314,8 +301,7 @@ df1['WinningPerDes'] = 0
 df1['Strength'] = 0
 df1['latest_form'] = 0
 
-print
-len(df1)
+print(len(df1))
 for index in range(len(df1)):
     if df1.loc[index, 'TeamB'] < df1.loc[index, 'TeamA']:
         df1.loc[index, ['TeamA', 'TeamB']] = df1.loc[index, ['TeamB', 'TeamA']].values
@@ -327,11 +313,10 @@ Toss(df1)
 WinningPerDes(df1)
 HomeTeam(df1)
 bat_avg, bowl_avg = bat_debut()
-print
-bat_avg
-print
-bowl_avg
+print(bat_avg)
+print(bowl_avg)
 
 Scoringfn(df1, bat_avg, bowl_avg)
 latest_form(df1, bat_avg)
+Classfier(df1)
 df1.to_csv("OutputOfAllModified.csv")

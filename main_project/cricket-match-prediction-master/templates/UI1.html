@@ -1,92 +1,103 @@
 <html>
 <head>
 		<title>CAAP</title>
-			<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="{{url_for('static',filename='images/icons/favicon.ico')}}"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='fonts/iconic/css/material-design-iconic-font.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/animate/animate.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/css-hamburgers/hamburgers.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/animsition/css/animsition.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/select2/select2.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/daterangepicker/daterangepicker.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/util.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/main.css')}}">
-<!--===============================================================================================-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<style type="text/css">
 
+
+
+video{ 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+}
+
+h1{
+	color: #879867;
+}
+
+card-deck{
+	width: 100px;
+	height: 100px;
+}
+
+</style>
 </head>
 
 <body>
-		<div class="background-wrap" class="body">
-		<video preload="auto" autoplay="true" loop="loop" muted="muted" class="video">
+
+		<div class="background-wrap" class="video">
+		<video preload="auto" autoplay="true" loop="loop" muted="muted" class="video" >
 			<source src="{{url_for('static',filename='video/stump.mp4')}}" type="video/mp4">
 				not supported
 		</video>	
-		</div>
-		<p>CRICKET ANALYSIS AND PREDICTION</p>
+		<BR><BR>
+		</div><marquee behaviour="scroll" direction="left" scrollamount="30">
+			<img src="{{url_for('static',filename='images/TEXT.png')}}">
+		</marquee>
+<br><br><br><br><br><br>
 
-<form action="UI1" method="post" >
-<table id="my_table" style="float: left;" bgcolor="#345490" style="margin-left: 500px">
-<tr>
-	<td>
-		<label class="label-input100">ROLE</label></td>
+
+
+
+<table>
+	<form action="UI1" method="post">
+	<tr><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+
 		<td>
-					<select  id="fist team" name="select">
-						<option>batsman</option>
-						<option>bowler</option>
-						
-					</select>
-	</td>
-</tr>	
 
-<tr>
-	<td>
-					<span class="focus-input100"></span>
-				<label class="label-input100">PLAYER NAME</label></td>
-				<td>
-				<input type="text" name="searchplayer" ><br>
-				<!-- <div class="container-contact100-form-btn"> -->
-	</td>
+		<div class="card-deck mx-auto" style="width: 350px;" >
+<div class="card" style="width: 18rem;"">
+
+  <img class="card-img-top" src="{{url_for('static',filename='images/analysis.jpg')}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Player Analysis</h5>
+    <p class="card-text">See how your favorite player has played over the years.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+    <a href="{{ url_for('UI1') }}" ><input class="btn btn-primary" type="submit" name="Analysis" value="Analysis" ></a>
+</div>
+  </div>
+</div>
 
 
-</tr>
-
-<tr>
-	<td>
-		<button  class="contact100-form-btn" type="submit" name="search"value="search">
-			<a href="{{ url_for('UI1') }}">
-						<span>
-							Submit
-							<i class="zmdi zmdi-arrow-right m-l-8"></i>
-						</span>
-			</a>
-					</button>
 	</td>
 
-</tr>
+		<td>
+			<div class="card-deck mx-auto" style="width: 350px;" >
+<div class="card" style="width: 18rem;"">
+
+  <img class="card-img-top" src="{{url_for('static',filename='images/prediction.jpg')}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Prediction</h5>
+    <p class="card-text">See which team has better chance of winning the upcoming match.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+    <a href="{{ url_for('UI1') }}"><input  name="Prediction" class="btn btn-primary"type="submit" value="Prediction"></a>
+</div>
+  </div>
+</div>
+				
+
+	</td>
+	</tr>
+
+
 </form>
 </table>
-<table bgcolor="#987643"  style="margin-left: 900px">
-	<tr>
-		<td>
-			<a href="index.html">
-			<img src="{{url_for('static',filename='images/bat.png')}}" >
-		</td>
-	</tr>
-</table>
-		
+
+
+
+
+
+
+
+
 
 </body>
 </html>

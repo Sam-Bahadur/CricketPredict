@@ -15,34 +15,18 @@ def index():
 @app.route('/UI1', methods=['GET', 'POST'])
 def UI1():
     if request.method == 'POST':
-        if str(request.form.get('Result Prediction'))=='Result Prediction':
-            return render_template('UI2.html')
-        elif str(request.form.get('search'))=='search':
+        if str(request.form.get('Prediction'))=='Prediction':
+           return render_template('prediction.html')
+        elif str(request.form.get('Analysis')) == 'Analysis':
+            return render_template('analysis.html')
 
-            select=str(request.form.get('select'))
-            #print(select)
-            player=str(request.form.get('searchplayer'))
-
-            #print(player)
-
-            graph.graphofplayer(select,player)
-            a,b,c,d,e,f,g=database.readdata(player)
-            #a1= ", ".join( repr(e) for e in a )
-            a1=str(a)[2:-3]
-            b1=str(b)[2:-3]
-            c1=str(c)[2:-3]
-            d1=str(d)[2:-3]
-            e1=str(e)[2:-3]
-            f1=str(f)[2:-3]
-
-            return render_template('UI4.html',naam=player,m=a1,i=b1,r=c1,h=d1,avg=e1,sr=f1,p=g)
 
 
         else:
             return redirect(url_for('UI1'))
 
     elif request.method=='GET':
-        return "sorry"
+        return 'hello world'
 
 def madhu(sel,pla):
     selected=sel
@@ -53,29 +37,41 @@ def madhudai():
 
 
 
-@app.route('/UI2', methods=['POST'])
-def UI2():
+@app.route('/prediction', methods=['POST'])
+def prediction():
     teamA =str(request.form.get('team1')).title()
     teamB=str(request.form.get('team2')).title()
     venue=str(request.form.get('venue')).capitalize()
     tosswin=str(request.form.get('tosswin')).title()
     dec=str(request.form.get('tossdis'))
-    a,b,c,d = modelGenerator.startPrediction(teamA, teamB, venue, tosswin, dec)
+    a,b,c,d,e= modelGenerator.startPrediction(teamA, teamB, venue, tosswin, dec)
+    if (e=='a'):
+        return "please enter valid city"
     return render_template('UI3.html',value=a,value1=b,value2=c,value3=d)
     #return render_template('welcome.php')
 
-@app.route('/UI4', methods=['GET', 'POST'])
-def UI4():
+@app.route('/analysis', methods=['GET', 'POST'])
+def analysis():
     if request.method == 'POST':
-        a=UI1()
+        select = str(request.form.get('role'))
+        # print(select)
+        player = str(request.form.get('playername'))
+        graph.graphofplayer(select, player)
+        a, b, c, d, e, f, g = database.readdata(player)
+        # a1= ", ".join( repr(e) for e in a )
+        a1 = str(a)[2:-3]
+        b1 = str(b)[2:-3]
+        c1 = str(c)[2:-3]
+        d1 = str(d)[2:-3]
+        e1 = str(e)[2:-3]
+        f1 = str(f)[2:-3]
 
-        # do stuff when the form is submitted
+        return render_template('UI4.html', naam=player, m=a1, i=b1, r=c1, h=d1, avg=e1, sr=f1, p=g)
 
-        # redirect to end the POST handling
-        # the redirect can be to the same route or somewhere else
+
         return 'her'
 
-   # show the form, it wasn't submitted
+
     return "helll"
 
 #@app.route('/CapstoneProject/')

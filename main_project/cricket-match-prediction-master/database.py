@@ -15,40 +15,47 @@ def data():
 def readdata(naam):
     con = sqlite3.connect('Major.db')
     ca = con.cursor()
-    str1="select match from playerinfo where name="
-    querry=str1+"'{}'".format(naam)
-
+    str2="%"+naam+"%"
+    str1="select match from playerinfo where name LIKE "
+    querry=str1+"'{}'".format(str2)
+    print(querry)
     ca.execute(querry)
     res=ca.fetchall()
-    str1 = "select inn from playerinfo where name="
-    querry = str1 + "'{}'".format(naam)
-    print(querry)
 
+
+
+    str1 = "select inn from playerinfo where name LIKE "
+    querry = str1 + "'{}'".format(str2)
     ca.execute(querry)
     res1 = ca.fetchall()
-    str1 = "select run from playerinfo where name="
-    querry = str1 + "'{}'".format(naam)
 
+
+    str1 = "select run from playerinfo where name LIKE "
+    querry = str1 + "'{}'".format(str2)
     ca.execute(querry)
     res2 = ca.fetchall()
-    str1 = "select hs from playerinfo where name="
-    querry = str1 + "'{}'".format(naam)
 
+
+    str1 = "select hs from playerinfo where name LIKE "
+    querry = str1 + "'{}'".format(str2)
     ca.execute(querry)
     res3 = ca.fetchall()
-    str1 = "select avg from playerinfo where name="
-    querry = str1 + "'{}'".format(naam)
 
+
+    str1 = "select avg from playerinfo where name LIKE "
+    querry = str1 + "'{}'".format(str2)
     ca.execute(querry)
     res4 = ca.fetchall()
 
-    str1 = "select sr from playerinfo where name="
-    querry = str1 + "'{}'".format(naam)
-
+    str1 = "select sr from playerinfo where name LIKE "
+    querry = str1 + "'{}'".format(str2)
     ca.execute(querry)
     res5 = ca.fetchall()
-    str1 = "select photo from playerinfo where name="
-    querry = str1 + "'{}'".format(naam)
+
+
+    str1 = "select photo from playerinfo where name LIKE "
+
+    querry = str1 + "'{}'".format(str2)
 
     ca.execute(querry)
     res6 = ca.fetchall()
@@ -65,4 +72,4 @@ def readdata(naam):
 
 #create_table()
 #data()
-readdata('angelo mathews')
+readdata('ange')
