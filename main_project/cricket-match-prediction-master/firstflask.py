@@ -26,7 +26,7 @@ def UI1():
             return redirect(url_for('UI1'))
 
     elif request.method=='GET':
-        return 'hello world'
+        return 'hello'
 
 def madhu(sel,pla):
     selected=sel
