@@ -49,19 +49,19 @@ def Toss_Decision_Changes(Toss, Toss_Decision):
 
 
 def Win_Prob_Of_TeamA(df, teamA, teamB):
-    # playOffAandB=df[((df['TeamA']==teamA)&(df['TeamB']==teamB) | (df['TeamA']==teamB)&(df['TeamB']==teamA))]
-    #
-    playOffAandB = df.sort_values(by='Date', ascending=[0])
+     playOffAandB=df[((df['TeamA']==teamA)&(df['TeamB']==teamB) | (df['TeamA']==teamB)&(df['TeamB']==teamA))]
+
+     playOffAandB = playOffAandB.sort_values(by='Date', ascending=[0])
     # print(playOffAandB)
     # playOffAandB = playOffAandB.head(10)
 
-    Awin = playOffAandB[(playOffAandB['Winner'] == 1)]
-    a = len(Awin)
-    p = len(playOffAandB)
+     Awin = playOffAandB[(playOffAandB['Winner'] == 1)]
+     a = len(Awin)
+     p = len(playOffAandB)
 
-    if p == 0:
+     if p == 0:
         return 0
-    return a / p
+     return a / p
 
 
 def Win_prob_on_venue(df1, venue, Toss_Decision):
@@ -173,7 +173,7 @@ def startPrediction(teamA_input, teamB_input, venue_input, toss_input, tossDecis
     df = pd.read_csv('OutputOfAllModified.csv')
 
     if teamB_input < teamA_input:
-        teamB_input, teamA_input = teamA_input, teamB_input
+        teamB_input, teamA_input = teamA_input, teamB_input#swapping a and b
 
     TeamA = teamA_input
     TeamB = teamB_input
@@ -193,7 +193,7 @@ def startPrediction(teamA_input, teamB_input, venue_input, toss_input, tossDecis
         Toss = Toss_Changes(TeamA, TeamB, Toss)#if team ais a toss winner then it will return 1
         Toss_Decision = Toss_Decision_Changes(Toss, Toss_Decision)#if team1 is toss winner and choose bat returns 1
 
-        HTH = Win_Prob_Of_TeamA(df, TeamA, TeamB)
+        HTH = Win_Prob_Of_TeamA(df, TeamA, TeamB)#probability of winning the match bay teama
     # print(HTH)
 
         WinningPerDes = Win_prob_on_venue(df, Venue, Toss_Decision)
@@ -202,10 +202,10 @@ def startPrediction(teamA_input, teamB_input, venue_input, toss_input, tossDecis
         bat_avg = 22.6046511628
         bowl_avg = 29.7670682731
 
-        Strength = strength_based_on_batBowl_avg(df, TeamA, TeamB)
+        Strength = strength_based_on_batBowl_avg(df, TeamA, TeamB)#strengh anusaar sort gareko
     # print(Strength)
 
-        latest_form = pastPerformance(df, TeamA, TeamB, bat_avg)
+        latest_form = pastPerformance(df, TeamA, TeamB, bat_avg)#relative strength of teama and teamb
     # print(latest_form)
 
         print("teamA : " + TeamA)

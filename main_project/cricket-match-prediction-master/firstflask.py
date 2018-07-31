@@ -56,8 +56,8 @@ def analysis():
         select = str(request.form.get('role'))
         # print(select)
         player = str(request.form.get('playername'))
-        graph.graphofplayer(select, player)
-        a, b, c, d, e, f, g = database.readdata(player)
+
+        a, b, c, d, e, f, g,det,re,nam = database.readdata(player)
         # a1= ", ".join( repr(e) for e in a )
         a1 = str(a)[2:-3]
         b1 = str(b)[2:-3]
@@ -65,8 +65,13 @@ def analysis():
         d1 = str(d)[2:-3]
         e1 = str(e)[2:-3]
         f1 = str(f)[2:-3]
+        re1=str(re)[2:-3]
+        detail1=str(det)[2:-3]
+        nam1 = str(nam)[3:-4]
+        print(nam1)
+        graph.graphofplayer(select,re1)
 
-        return render_template('UI4.html', naam=player, m=a1, i=b1, r=c1, h=d1, avg=e1, sr=f1, p=g)
+        return render_template('UI4.html', naam=nam1, m=a1, i=b1, r=c1, h=d1, avg=e1, sr=f1, p=g,detail=detail1,idd=re1)
 
 
         return 'her'
