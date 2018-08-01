@@ -17,8 +17,10 @@ def UI1():
     if request.method == 'POST':
         if str(request.form.get('Prediction'))=='Prediction':
            return render_template('prediction.html')
-        elif str(request.form.get('Analysis')) == 'Analysis':
+        elif str(request.form.get('Statistics')) == 'Statistics':
             return render_template('analysis.html')
+        elif str(request.form.get('Analysis')) == 'Analysis':
+            return render_template('feature_analysis.html')
 
 
 
@@ -41,6 +43,9 @@ def prediction():
     dec=str(request.form.get('tossdis'))
     if (teamA == teamB):
         error="Please Choose Different Countries"
+        return error
+    if (tosswin != teamB and tosswin != teamA):
+        error="Please Enter valid toss winner"
         return error
     a,b,c,d,e= modelGenerator.startPrediction(teamA, teamB, venue, tosswin, dec)
 
