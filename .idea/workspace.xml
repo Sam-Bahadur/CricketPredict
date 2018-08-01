@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b50ceb06-39b8-4f7f-b0a3-b1a75d77ac97" name="Default" comment="" />
+    <list default="true" id="b50ceb06-39b8-4f7f-b0a3-b1a75d77ac97" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/firstflask.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/firstflask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/my_dumped_classifier.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/my_dumped_classifier.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI1.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI3.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/prediction.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/prediction.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +22,20 @@
       <file leaf-file-name="firstflask.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/firstflask.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            <state relative-caret-position="130">
+              <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
               <folding>
                 <element signature="e#0#67#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prediction.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/prediction.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2054">
+              <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -35,7 +52,7 @@
       <file leaf-file-name="database.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/database.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
+            <state relative-caret-position="2054">
               <caret line="80" column="57" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
             </state>
           </provider>
@@ -50,31 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UI4.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI4.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Logistic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/Logistic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="modelGenerator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/modelGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="4056">
+              <caret line="164" column="31" lean-forward="true" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -136,7 +133,6 @@
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/welcome.php" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI2.html" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/history_script.py" />
-        <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI3.html" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI4.php" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/main.html" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI11.html" />
@@ -145,17 +141,19 @@
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/static/UI1.css" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/analysis.html" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/static/css/main.css" />
-        <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI1.html" />
-        <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/prediction.html" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/Logistic.py" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/show_data.html" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/math_plot.py" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/modelGenerator.py" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/app.py" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/database.py" />
-        <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/firstflask.py" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI4.html" />
         <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/graph.py" />
+        <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI1" />
+        <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI1.html" />
+        <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI3.html" />
+        <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/firstflask.py" />
+        <option value="$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/prediction.html" />
       </list>
     </option>
   </component>
@@ -195,6 +193,13 @@
               <item name="main_project" type="462c0819:PsiDirectoryNode" />
               <item name="cricket-match-prediction-master" type="462c0819:PsiDirectoryNode" />
               <item name="Dataset" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CricketPredict" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cricket" type="462c0819:PsiDirectoryNode" />
+              <item name="main_project" type="462c0819:PsiDirectoryNode" />
+              <item name="cricket-match-prediction-master" type="462c0819:PsiDirectoryNode" />
+              <item name="stadium" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CricketPredict" type="b2602c69:ProjectViewProjectNode" />
@@ -468,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533048529994</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="player photo inserted search can be done by providing just the part of the player name">
+      <created>1533048829355</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1533048829355</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -621,8 +633,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3198">
-          <caret line="123" column="12" lean-forward="true" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
+        <state relative-caret-position="2574">
+          <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -759,13 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/static/UI1.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -775,13 +780,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI11.html" />
     <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI123.html" />
-    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -790,13 +788,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/index.html" />
-    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="80" column="26" lean-forward="true" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/analysis.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -811,13 +802,6 @@
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/prediction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="113" column="37" selection-start-line="113" selection-start-column="37" selection-end-line="113" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -851,50 +835,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/Logistic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/modelGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI4444.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI4444.html" />
     <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
+        <state relative-caret-position="2054">
           <caret line="80" column="57" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -905,10 +850,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/UI2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/templates/prediction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2054">
+          <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/modelGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4056">
+          <caret line="164" column="31" lean-forward="true" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/Logistic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="108" column="16" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main_project/cricket-match-prediction-master/firstflask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        <state relative-caret-position="130">
+          <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
           <folding>
             <element signature="e#0#67#0" expanded="true" />
           </folding>

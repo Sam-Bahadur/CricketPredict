@@ -28,23 +28,22 @@ def UI1():
     elif request.method=='GET':
         return 'hello'
 
-def madhu(sel,pla):
-    selected=sel
-    played=pla
-
-def madhudai():
-    graph.graphofplayer()
 
 
 
 @app.route('/prediction', methods=['POST'])
 def prediction():
+    error = None
     teamA =str(request.form.get('team1')).title()
     teamB=str(request.form.get('team2')).title()
     venue=str(request.form.get('venue')).capitalize()
     tosswin=str(request.form.get('tosswin')).title()
     dec=str(request.form.get('tossdis'))
+    if (teamA == teamB):
+        error="Please Choose Different Countries"
+        return error
     a,b,c,d,e= modelGenerator.startPrediction(teamA, teamB, venue, tosswin, dec)
+
     if (e=='a'):
         return "please enter valid city"
     return render_template('UI3.html',value=a,value1=b,value2=c,value3=d)
