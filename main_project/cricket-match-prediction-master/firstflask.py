@@ -36,6 +36,12 @@ def UI1():
 @app.route('/prediction', methods=['POST'])
 def prediction():
     error = None
+    if str(request.form.get('Statistics')) == 'Statistics':
+        return render_template('analysis.html')
+    elif str(request.form.get('Analysis')) == 'Analysis':
+        return render_template('feature_analysis.html')
+    elif str(request.form.get('Home')) == 'Home':
+        return render_template('UI1.html')
     teamA =str(request.form.get('team1')).title()
     teamB=str(request.form.get('team2')).title()
     venue=str(request.form.get('venue')).capitalize()
@@ -57,6 +63,14 @@ def prediction():
 @app.route('/analysis', methods=['GET', 'POST'])
 def analysis():
     if request.method == 'POST':
+        if str(request.form.get('Statistics')) == 'Statistics':
+            return render_template('analysis.html')
+        elif str(request.form.get('Prediction')) == 'Prediction':
+            return render_template('prediction.html')
+        elif str(request.form.get('Home')) == 'Home':
+            return render_template('UI1.html')
+        elif str(request.form.get('Analysis')) == 'Analysis':
+            return render_template('feature_analysis.html')
         select = str(request.form.get('role'))
         # print(select)
         player = str(request.form.get('playername'))
@@ -82,6 +96,17 @@ def analysis():
 
 
     return "helll"
+@app.route('/feature', methods=['GET', 'POST'])
+def feature():
+    if request.method == 'POST':
+        if str(request.form.get('Statistics')) == 'Statistics':
+            return render_template('analysis.html')
+        elif str(request.form.get('Prediction')) == 'Prediction':
+            return render_template('prediction.html')
+        elif str(request.form.get('Analysis')) == 'Analysis':
+            return render_template('feature_analysis.html')
+        elif str(request.form.get('Home')) == 'Home':
+            return render_template('UI1.html')
 
 #@app.route('/CapstoneProject/')
 #def CapstoneProject():
