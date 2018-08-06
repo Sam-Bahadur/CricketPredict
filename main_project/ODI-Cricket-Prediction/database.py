@@ -14,9 +14,11 @@ def data():
     conn.close()
 '''
 def readdata(naam):
+
     con = sqlite3.connect('Major.db')
     ca = con.cursor()
     str2="%"+naam+"%"
+
     str1="select match from playerinfo where name LIKE "
     querry=str1+"'{}'".format(str2)
 
@@ -82,13 +84,16 @@ def readdata(naam):
     return res,res1,res2,res3,res4,res5,res6,res7,re,res8
 
 def desh(countr):
+    a='alter table countryinfo add ranking int'
     con = sqlite3.connect('Major.db')
     ca = con.cursor()
     str2 = "%" + countr + "%"
+
     str1 = "select match from countryinfo where name LIKE "
     querry = str1 + "'{}'".format(str2)
     ca.execute(querry)
     res = ca.fetchall()
+
 
     str1 = "select won from countryinfo where name LIKE "
     querry = str1 + "'{}'".format(str2)
@@ -134,11 +139,22 @@ def desh(countr):
 
     ca.execute(querry)
     res8 = ca.fetchall()
-    return res,re,res1,res2,res3,res4,res5,res6,res8
+
+    str1 = "select rank from countryinfo where name LIKE "
+    querry = str1 + "'{}'".format(str2)
+    ca.execute(querry)
+    res9 = ca.fetchall()
+
+
+    str1 = "select mostwins from countryinfo where name LIKE "
+    querry = str1 + "'{}'".format(str2)
+    ca.execute(querry)
+    ress = ca.fetchall()
+    return res,re,res1,res2,res3,res4,res5,res6,res8,res9,ress
 
 
 
 
 #create_table()
-desh('australia')
+#desh('australia')
 #data()

@@ -90,8 +90,9 @@ def player_stats():
         elif str(request.form.get('country')) == 'country':
             country = str(request.form.get('countryname'))
 
-            a, b, c, d, e, f, g, det, re = database.desh(country)
+            a, b, c, d, e, f, g, det, re,rank,mstwins = database.desh(country)
             # a1= ", ".join( repr(e) for e in a )
+            print(a)
             mat = str(a)[2:-3]
             w = str(b)[2:-3]
             los = str(c)[2:-3]
@@ -102,8 +103,10 @@ def player_stats():
 
             name = str(re)[3:-4]
             ls = str(det)[2:-3]
+            rank1 = str(rank)[2:-3]
+            mstwins1 = str(mstwins)[3:-4]
 
-            return render_template('countrydisplay.html', naam=hs, m=mat, i=w, r=los, h=tie, avg=no, sr=wl,detail=ls,idd=name)
+            return render_template('countrydisplay.html', naam=hs,rank1=rank1,mstwins1=mstwins1.capitalize(), m=mat, i=w, r=los, h=tie, avg=no, sr=wl,detail=ls,idd=name)
 
 
         return 'her'

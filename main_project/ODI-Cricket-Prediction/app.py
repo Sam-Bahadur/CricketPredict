@@ -303,7 +303,7 @@ def latest_form(df1, bat_avg):
 
 df1 = pd.read_csv('Dataset/CompleteMatchDetails.csv')
 
-df1['Date'] = pd.to_datetime(df1.Date)
+#df1['Date'] = pd.to_datetime(df1.Date)
 
 df1['HTH'] = 0
 df1['WinningPerDes'] = 0
