@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		td.a {
+			text-transform: capitalize;
+		}
+
+	</style>
+	<title></title>
+</head>
+<body>
+
+
+	<table style="float: left">
+
+		<tr><td><img src="{{url_for('static',filename='playerinfo/' + naam + '.png')}}" width="345" height="345"></td>
+
+
+	</table>
+
+	<table  style="float: left;">
+		<tr><td class="a"><h2><b>{{ naam }}</b></h2><hr></td></tr>
+
+		<tr><td><b>Matches</b></td></tr>
+'		<tr><td>{{ m  }}<hr></td></tr>
+		
+		<tr><td><b>Innings</b></td></tr>
+		<tr><td>{{ i }}<hr></td></tr>
+
+		<tr><td><b>Runs</b></td></tr>
+		<tr><td>{{ r }}<hr></td></tr>
+
+		<tr><td><b>Highest score&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b></td></tr>
+		<tr><td>{{ h }}<hr></td></tr>
+
+		<tr><td><b>Average score</b></td></tr>
+		<tr><td>{{ avg }}<hr></td></tr>
+
+		<tr><td><b>Strike rate</b></td></tr>
+		<tr><td>{{ sr }}<hr></td></tr>
+
+
+	</table>
+<img src="{{url_for('static',filename='graph/' + idd + '1.png')}}" width="600" height="500">
+<p align="center" style="font-size:25px;">{{ detail }}</p>
+</body>
+</html>

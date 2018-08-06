@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		td.a {
+			text-transform: capitalize;
+		}
+
+	</style>
+	<title></title>
+</head>
+<body>
+
+
+	<table style="float: left">
+
+		<tr><td><img src="{{url_for('static',filename='countryphoto/' + idd + '.jpg')}}" width="345" height="345"></td>
+
+
+	</table>
+
+	<table  style="float: left;">
+		<tr><td class="a"><h2><b>{{ idd }}</b></h2><hr></td></tr>
+
+		<tr><td><b>Matches</b></td></tr>
+'		<tr><td>{{ m  }}<hr></td></tr>
+
+		<tr><td><b>Wins</b></td></tr>
+		<tr><td>{{ i }}<hr></td></tr>
+
+		<tr><td><b>Lost</b></td></tr>
+		<tr><td>{{ r }}<hr></td></tr>
+
+		<tr><td><b>Tied</b></td></tr>
+		<tr><td>{{ h }}<hr></td></tr>
+
+		<tr><td><b>No Result</b></td></tr>
+		<tr><td>{{ avg }}<hr></td></tr>
+
+		<tr><td><b>Highest score&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b></td></tr>
+		<tr><td>{{ naam }}<hr></td></tr>
+
+
+
+		<tr><td><b>Lowest Score</b></td></tr>
+		<tr><td>{{ detail }}<hr></td></tr>
+
+		<tr><td><b>Win Loss Ratio</b></td></tr>
+		<tr><td>{{ sr }}<hr></td></tr>
+
+
+	</table>
+<!--<img src="{{url_for('static',filename='graph/' + idd + '1.png')}}" width="600" height="500">-->
+</body>
+</html>
