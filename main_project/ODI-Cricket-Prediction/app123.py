@@ -103,34 +103,26 @@ def Toss(df1):
     df1.loc[df1['Winner'] == df1['TeamB'], 'Winner'] = 0
 
 
-def Classifier(df1):
-    predictors = ['Toss', 'Toss_Decision', 'Venue', 'HTH', 'WinningPerDes', 'Strength', 'latest_form']
+def Classfier(df1):
+    predictors = ['Toss', 'Toss_Decision', 'HTH', 'Venue', 'WinningPerDes', 'Strength',
+                  'latest_form']
     alg = LogisticRegressionScratch(lr=0.1, num_iter=3000)
-
-    df = df1[['Toss', 'Toss_Decision', 'Venue', 'HTH', 'WinningPerDes', 'Strength', 'latest_form', 'Winner']]
-    train_predictors = (df[predictors])
-    train_target = df["Winner"]
-    alg.fit(train_predictors, train_target)
-
-    with open('my_dumped_classifier.pkl', 'wb') as fid:
-        pk.dump(alg, fid)
+    df = df1[['Toss', 'Toss_Decision', 'HTH', 'Venue', 'WinningPerDes', 'Strength', 'latest_form', 'Winner']]
+    kf = KFold(df1.shape[0], random_state=1)
+    predictions = []
+    for train, test in kf.split(df):
+        train_predictors = (df[predictors].iloc[train, :])
+        train_target = df["Winner"].iloc[train]
+        alg.fit(train_predictors, train_target)
+        with open('my_dumped_classifier.pkl', 'wb') as fid:
+            pk.dump(alg, fid)
 
         # load it again
-    with open('my_dumped_classifier.pkl', 'rb') as fid:
-        alg = pk.load(fid)
+        with open('my_dumped_classifier.pkl', 'rb') as fid:
+            alg = pk.load(fid)
 
-    #test_predictions = alg.predict(testData)
-
-    train_predictors = train_predictors.values
-    print("shape",train_predictors.shape)
-
-    # accuracy calculation
-    predictions = []
-    for i in range(len(train_predictors)):
-        rowdf = pd.DataFrame(train_predictors[i])
-
-        result = alg.predict(rowdf.T)
-        predictions.append(result)
+    test_predictions = alg.predict(df[predictors].iloc[test, :])
+    predictions.append(test_predictions)
 
     predictions = np.concatenate(predictions, axis=0)
     predictions = predictions.astype(int)
@@ -140,8 +132,7 @@ def Classifier(df1):
             cnt = cnt + 1
 
     accuracy = cnt / len(predictions)
-    print("Test Accuracy is :", accuracy*100)
-    print(alg.theta)
+    print(accuracy)
 
 def bat_debut():
     path = "D:/Cricket/main_project/cricket-match-prediction-master/Dataset/PlayerInfo"  # use your path
@@ -153,8 +144,7 @@ def bat_debut():
         # print df
         list_.append(df)
     #frame = pd.concat(list_)
-    frame = pd.read_csv('batDebutOutput.csv')
-    #frame.to_csv('batDebutOutput.csv')
+    frame=pd.read_csv('batDebutOutput.csv')
 
     # batsman
     debutant_bat = frame[((frame['Bat_Inngs'] == '1') & (frame['Bowl_Inngs'] == '-') & (frame['Matches_Played'] == 1))]
@@ -199,57 +189,64 @@ def Scoringfn(df1, bat_avg, bowl_avg):
         df['Bowl_Avg'] = df['Bowl_Avg'].replace('-', MAX)
         df['Wkts_Taken'] = df['Wkts_Taken'].replace('-', 0)
 
+
+
         teamA_list = df[(df.Country == teamA)]
         teamB_list = df[(df.Country == teamB)]
 
         total_A = 0.0
         total_B = 0.0
-        top_A = 0.0
-        top_B = 0.0
+        top_A=0.0
+        top_B=0.0
 
         # batting ab=vg considering 11 players
 
         for index, row in teamA_list.iterrows():
             total_A = total_A + float(row['Bat_Avg'])
-            top_A = top_A + float(row['Bowl_Avg'])
+            top_A=top_A+float(row['Bowl_Avg'])
+
         power_A = total_A / 11
-        power_A1=top_A/11
+        top_A=top_A/11
         # print(power_A)
 
         for index, row in teamB_list.iterrows():
             total_B = total_B + float(row['Bat_Avg'])
             top_B = top_B + float(row['Bowl_Avg'])
         power_B = total_B / 11
-        power_B1=top_B/11
+        top_B=top_B/11
         # print power_A, power_B
 
         # bowling avg of 6 bowlers
-
-        #teamA_list = teamA_list.sort_values(by=['Wkts_Taken'])
+        #teamA_list = teamA_list.sort_values(by=['Bowl_Avg'])
         #top_bowl_A = teamA_list.head(6)
 
-        # teamB_list[['Bowl_Avg']] = teamB_list[['Bowl_Avg']].astype(float)
-        #teamB_list = teamB_list.sort_values(by='Wkts_Taken', ascending=0)
+        #teamB_list[['Bowl_Avg']] = teamB_list[['Bowl_Avg']].astype(float)
+        #teamB_list = teamB_list.sort_values(by='Bowl_Avg', ascending=0)
         #top_bowl_B = teamB_list.head(6)
 
         #top_A = 0.0
         #top_B = 0.0
-        ##   top_A = top_A + float(row['Bowl_Avg'])
+        #for index, row in top_bowl_A.iterrows():
+         #   top_A = top_A + float(row['Bowl_Avg'])
         # print row.Wkts_Taken, row.Bowl_Avg, row.Five_Wkts_Hawl
         #top_A = top_A / 6
 
         # print top_A
 
-        ##   top_B = top_B + float(row['Bowl_Avg'])
+        #for index, row in top_bowl_B.iterrows():
+        #   top_B = top_B + float(row['Bowl_Avg'])
         # print row.Wkts_Taken, row.Bowl_Avg, row.Five_Wkts_Hawl
         #top_B = top_B / 6
 
         # print top_B
 
         # strngth=power_A-top_B + top_A-power_B
-        strngth = (power_A - power_A1) - (power_B - power_B1)
 
-        df1.iloc[i, 11] = strngth
+
+        strngth = (power_A - top_A) - (power_B - top_B)
+        #print(strngth)
+
+        #df1.iloc[i, 11] = strngth
 
 
 # print cnt/tot
@@ -322,8 +319,7 @@ for index in range(len(df1)):
         df1.loc[index, ['TeamA', 'TeamB']] = df1.loc[index, ['TeamB', 'TeamA']].values
 
 df1.to_csv("initialOutput.csv")
-#bat_avg=23.204918032786885
-#bowl_avg=29.76706827309237
+
 HTH(df1)
 Toss(df1)
 WinningPerDes(df1)
@@ -331,8 +327,8 @@ HomeTeam(df1)
 bat_avg, bowl_avg = bat_debut()
 print(bat_avg)
 print(bowl_avg)
+
 Scoringfn(df1, bat_avg, bowl_avg)
 latest_form(df1, bat_avg)
-Classifier(df1)
-
+Classfier(df1)
 df1.to_csv("OutputOfAllModified.csv")
