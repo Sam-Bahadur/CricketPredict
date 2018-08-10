@@ -1,7 +1,4 @@
 from flask import Flask, request, url_for, redirect,render_template
-from wtforms import Form, TextAreaField, validators
-import cgi
-import cgitb
 import modelGenerator
 import graph
 import database
@@ -92,7 +89,7 @@ def player_stats():
 
             a, b, c, d, e, f, g, det, re,rank,mstwins = database.desh(country)
             # a1= ", ".join( repr(e) for e in a )
-            print(a)
+
             mat = str(a)[2:-3]
             w = str(b)[2:-3]
             los = str(c)[2:-3]

@@ -26,6 +26,9 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">
+	<link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" type="text/css" media="all">
+<link href="{{ url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" media="all">
+
 <!--===============================================================================================-->
 
 
@@ -113,13 +116,15 @@ body {
 </div>
 
 </form>
+
 	<div class="background-wrap">
 		<video preload="auto" autoplay="true" loop="loop" muted="muted" class="video">
-			<source src="{{url_for('static',filename='video/stump.mp4')}}" type="video/mp4">
+			<source src="{{url_for('static',filename='video/nepal1.mp4')}}" type="video/mp4">
 				not supported
 		</video>	
 		</div>
-	
+
+<div class="main-agileits">
 	<div class="container-contact100">
 		<div class="wrap-contact100">
 
@@ -130,9 +135,7 @@ body {
 					CRICKET PREDICTION
 				</span>
 
-
-
-
+				<div align="center">
 				<label class="label-input100">First Team *</label>
 				<div class="wrap-input100 rs1 validate-input">
 					<!-- <input id="first-name" class="input100" type="text" name="first-name" placeholder="First Team"> -->
@@ -195,7 +198,7 @@ body {
 				</div>
 
 				<label class="label-input100">VENUE</label>
-				<input type="text" name="venue" class="wrap-input100 rs1 validate-input">
+				<input type="text" name="venue" class="wrap-input100 rs1 validate-input" required="">
 
 				<label class="label-input100">Toss Decision *</label>
 				<div class="wrap-input100 rs1 validate-input">
@@ -205,6 +208,7 @@ body {
 
 					</select>
 					<span class="focus-input100"></span>
+				</div>
 				</div>
 
 				<div class="container-contact100-form-btn">
@@ -220,10 +224,9 @@ body {
 				</div>
 			</form>
 		</div>
-			</div>
+	</div></div>
 
 		</div>
-	</div>
 
 
 
